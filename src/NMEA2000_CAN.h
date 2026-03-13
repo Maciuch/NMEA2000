@@ -292,6 +292,14 @@ tNMEA2000 &NMEA2000=*(new tNMEA2000_mbed());
 tmbedStream serStream;
 
 #elif USE_N2K_CAN == USE_N2K_ESP32_CAN
+#if defined(ARDUINO_M5Stack_ATOM)
+#ifndef ESP32_CAN_TX_PIN
+#define ESP32_CAN_TX_PIN GPIO_NUM_22
+#endif
+#ifndef ESP32_CAN_RX_PIN
+#define ESP32_CAN_RX_PIN GPIO_NUM_19
+#endif
+#endif
 #include <NMEA2000_esp32.h>       // https://github.com/ttlappalainen/NMEA2000_esp32
 tNMEA2000 &NMEA2000=*(new tNMEA2000_esp32());
 
