@@ -299,7 +299,7 @@ tmbedStream serStream;
 #ifndef ESP32_CAN_RX_PIN
 #define ESP32_CAN_RX_PIN GPIO_NUM_19
 #endif
-#elif defined(ARDUINO_ESP32_S3_TOUCH_LCD_5)
+#elif defined(ARDUINO_WAVESHARE_ESP32S3_TOUCH_LCD_5)
 #ifndef ESP32_CAN_TX_PIN
 #define ESP32_CAN_TX_PIN GPIO_NUM_15
 #endif
